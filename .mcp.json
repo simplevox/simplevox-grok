@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "simplevox": {
+      "type": "http",
+      "url": "https://my.simplevox.app/mcp"
+    }
+  }
+}

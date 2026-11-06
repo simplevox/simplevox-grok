@@ -1,0 +1,18 @@
+{
+  "name": "simplevox",
+  "version": "1.0.0",
+  "description": "Run your SimpleVox business line from your AI assistant: catch up on calls and voicemail, find and quote what customers said, text and call with your approval, and keep contacts and conversations up to date.",
+  "author": {
+    "name": "SimpleVox",
+    "url": "https://simplevox.net"
+  },
+  "homepage": "https://simplevox.net/docs/ai-tools/grok",
+  "repository": "https://github.com/simplevox/simplevox-grok",
+  "license": "Apache-2.0",
+  "keywords": [
+    "simplevox",
+    "simplevox-mcp",
+    "simplevox-phone"
+  ],
+  "logo": "assets/logo.png"
+}

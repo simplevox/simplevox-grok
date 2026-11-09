@@ -112,4 +112,4 @@ Your data goes directly between SimpleVox and your AI app. SimpleVox records whi
 
 Licensed under the Apache License 2.0. See [LICENSE](LICENSE).
 
-Version 1.0.0.
+Version 1.0.3.

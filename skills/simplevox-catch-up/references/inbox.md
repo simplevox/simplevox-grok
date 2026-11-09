@@ -15,7 +15,7 @@
 
 ## Marking conversations
 
-- Pass each conversation's conversation_status.revision and activity_through unchanged from the response the person saw. Marking covers only that activity: anything a filter left out, or that arrived since, stays unread.
+- Pass each conversation's conversation_status.revision and activity_through unchanged from the response the person saw. Marking covers activity up to activity_through only. When a filter or page left out earlier activity that is still new, activity_through stops just before it, so that activity and everything after it stays unread, as does anything that arrived since.
 - If conversation_status shows unread activity the person hasn't seen, open it first.
 - conflict means a teammate changed the status. Show the current status and ask before marking again. unchanged means it already had that status.
 - Changes are recorded under the person's name, and nothing is sent to customers.

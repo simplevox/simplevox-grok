@@ -27,7 +27,7 @@ Nobody presses 1, and the customer hears the person, not a recording.
 
 1. **Check readiness.** get_my_account must list at least one entry in `calling_devices` and show `start_call.available` on the line. If no device is listed, tell the person to turn on the browser phone in SimpleVox, or open the SimpleVox mobile app with calls allowed.
 2. **Find the recipient** with search_contacts, or use the number the person gave, as E.164. Ask when more than one person matches.
-3. **Confirm** the recipient's name and number, the line, and which device will ring: the one marked `default` unless the person asks for another. Offer a short private note (`purpose`) that only they hear.
+3. **Confirm** the recipient's name and number, the line, and which device will ring: the one marked `default` unless the person asks for another. Offer a short private note (`purpose`) that only they hear. Then stop and wait for their yes. "Call Mary" asks you to set up the call; it isn't the yes. Don't say the call is starting yet.
 4. **Start** with start_call: a new idempotency_key, the confirmed details, `user_endpoint_id` only if the person picked a device other than the default, and user_confirmed set to true.
 5. **Watch it.** Check get_call_status about every 5 seconds until `setup_state` is terminal or `connection_state` is verified. Setup ends within 90 seconds.
 6. **Report:** connected only when `connection_state` is verified, which can be the customer's voicemail. Otherwise say what happened from `outcome`, for example the line was busy or the person didn't answer their phone.
@@ -40,6 +40,6 @@ Nobody presses 1, and the customer hears the person, not a recording.
 
 ## Rules
 
-- Never dial without an explicit yes in this conversation.
+- Never dial without an explicit yes to this call in this conversation. A yes to an earlier call or text doesn't count.
 - After a timeout, retry with the same idempotency_key and unchanged details. Never dial again with a new key.
 - The line's recording setting applies to these calls. If it's on and the person asks, tell them the call will be recorded.
